@@ -1,0 +1,53 @@
+###> symfony/framework-bundle ###
+/.env.local
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/phpunit/phpunit.phar
+/phpunit.xml
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> php-cs-fixer
+/.php-cs-fixer.php
+/.php-cs-fixer.cache
+###< php-cs-fixer
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+###< symfony/phpunit-bridge ###
+
+###> symfony/maker-bundle ###
+/phpunit.xml
+###< symfony/maker-bundle ###
+
+###> phpunit/phpunit
+/phpunit.xml
+###< phpunit/phpunit
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
