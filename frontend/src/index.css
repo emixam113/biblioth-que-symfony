@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Base colors */
+  --color-wood: #55607A;
+  
+  /* Semantic color variables */
+  --color-primary: var(--color-wood);
+  --color-secondary: #4F46E5;
+  --color-accent: #06B6D4;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  
+  /* Background colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F9FAFB;
+  
+  /* Text colors */
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #4B5563;
+  
+  /* Border colors */
+  --color-border: #E5E7EB;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+ 
+}
+
+/* Example of using theme variables in custom CSS */
+.custom-button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: background-color 0.2s;
+}
+
+.custom-button:hover {
+  background-color: color-mix(in srgb, var(--color-primary), black 15%);
+}
