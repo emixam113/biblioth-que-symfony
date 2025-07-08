@@ -1,0 +1,8 @@
+# Import des contrôleurs avec les attributs
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+# Import des routes personnalisées dans config/routes
+api_login:
+    resource: ../config/routes/api_login.yaml

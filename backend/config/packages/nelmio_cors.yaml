@@ -1,0 +1,9 @@
+nelmio_cors:
+    defaults:
+        origin_regex: true
+        allow_origin: ['*']
+        allow_methods: ['*']
+        allow_headers: ['*']
+
+       
+        allow_credentials: true
