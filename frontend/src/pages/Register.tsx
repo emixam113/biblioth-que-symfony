@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Signup() {
+export default function Register() {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
@@ -132,7 +132,7 @@ export default function Signup() {
           </div>
 
           <p className="text-sm text-center mt-2">
-            Déjà un compte ?{' '}
+            Déjà un compte ?{''}
             <a href="/login" className="text-blue-500 hover:underline">
               Se connecter
             </a>

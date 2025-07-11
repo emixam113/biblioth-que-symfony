@@ -21,8 +21,6 @@ class BookController extends AbstractController
     private $entityManager;
     private $webSocketNotifier;
 
-
-
     public function options()
     {
         $response = new Response();
@@ -43,7 +41,7 @@ class BookController extends AbstractController
     {
         try {
             $books = $this->entityManager->getRepository(Book::class)->findAll();
-            
+
             $data = [];
             foreach ($books as $book) {
                 $data[] = [
@@ -60,7 +58,7 @@ class BookController extends AbstractController
             $response->headers->set('Access-Control-Allow-Origin', '*');
             $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
             $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');
-            
+
             return $response;
         } catch (\Exception $e) {
             return $this->json([
@@ -105,7 +103,7 @@ class BookController extends AbstractController
             $book->setAuthor($data['author']);
             $book->setIsAvailable($data['is_available'] ?? true);
             $book->setCategory($data['category'] ?? '');
-            
+
             if (isset($data['published_date'])) {
                 $book->setPublishedDate(new \DateTime($data['published_date']));
             }
@@ -138,9 +136,9 @@ class BookController extends AbstractController
             $response->headers->set('Access-Control-Allow-Origin', '*');
             $response->headers->set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
             $response->headers->set('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');
-            
+
             return $response;
-            
+
         } catch (\Exception $e) {
             return $this->json([
                 'status' => 'error',
@@ -163,11 +161,11 @@ class BookController extends AbstractController
 
         $book->setTitle($data['title'] ?? $book->getTitle());
         $book->setAuthor($data['author'] ?? $book->getAuthor());
-        
+
         if (isset($data['is_available'])) {
             $book->setIsAvailable($data['is_available']);
         }
-        
+
         if (isset($data['category'])) {
             $book->setCategory($data['category']);
         }

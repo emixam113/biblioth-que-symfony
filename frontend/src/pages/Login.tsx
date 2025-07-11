@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -121,8 +122,11 @@ export default function Login() {
             />
           </div>
 
+              <a href="/ResetPassword" className="text-white  p-2 hover:underline">Mot de passe oublié</a>
+
+
           <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className=" border rounded-full p-2  underline cursor-pointer  btn-primary">
               Se connecter
             </button>
           </div>
